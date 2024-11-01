@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header and Footer</title>
+    <link rel="stylesheet" href="lab7.css">
+    <!-- Include FontAwesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo/Sandro'sCookieLogo.png" alt="Logo" width="100" height="auto">
+        </div>
+        <nav>
+            <ul class="nav-menu">
+              <li><a href="#" id="productsButton">Products</a></li>
+              <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Reservation</a></li>
+                  <li><a href="#">Custom Design</a></li>
+                  <li><a href="#">Delivery</a></li>
+                </ul>
+              </li>
+              <li><a href="#" id="aboutButton">About</a></li>
+              <li><a href="#" onclick="openPopup()">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <!-- Main Content (for now, just a placeholder) -->
+    <main>
+        <hr>
+        <br>
+        <h1>Welcome to Sandro's Cookie</h1>
+
+        <!--Carousel-->
+        <div class="carouselContainer">
+            <div class="carousel-container">
+                <div class="carousel">
+                  <img src="images/classicWithKisses.png" alt="Classic Cookie with kisses" class="carousel-image">
+                  <img src="images/brownies.jpg" alt="Cookie" class="carousel-image">
+                  <img src="images/milkAndChocolate.png" alt="Milk and Chocolate" class="carousel-image">
+                  <img src="images/assorted.png" alt="Assorted Cookies" class="carousel-image">
+                </div>
+                <button id="prev-btn" class="carousel-btn">Prev</button>
+                <button id="next-btn" class="carousel-btn">Next</button>
+              </div>
+        </div>
+
+        <h4>“Chewy, chocolate-packed, and melt-in-your-mouth moments await you with Sandro's Gourmet Cookies. Each bite offers a delightful crunch of golden-baked perfection with bursts of decadent chocolate chips. Perfect with a glass of cold milk or enjoyed on its own—an irresistible treat for every occasion!”</h4><hr><br>
+
+        <div class="products" id="products">
+          <br>
+          <h1>Our Products</h1>
+          <br>
+            <table>
+              <tr>
+                  <th>Image</th>
+                  <th>Description</th>
+                  <th>Action</th>
+              </tr>
+              <tr>
+                  <td><img src="images/assorted.png" alt="Assorted Cookies" width="150"></td>
+                  <td>Assorted 3 to 6 different cookies</td>
+                  <td><button class="read-more">Read More</button></td>
+              </tr>
+              <tr>
+                  <td><img src="images/classicWithKisses.png" alt="classic Cookie with kisses" width="150"></td>
+                  <td>Flat cookie with kisses toppings</td>
+                  <td><button class="read-more">Read More</button></td>
+              </tr>
+              <tr>
+                  <td><img src="images/brownies.jpg" alt="Brownies" width="150"></td>
+                  <td>Brownies topped with kisses and sesame seed</td>
+                  <td><button class="read-more">Read More</button></td>
+              </tr>
+              <tr>
+                  <td><img src="images/milkAndChocolate.png" alt="Milk Cookie" width="150"></td>
+                  <td>Milk cookie with chocolate toppings with no sugar</td>
+                  <td><button class="read-more">Read More</button></td>
+              </tr>
+          </table>
+          <hr>
+        </div>
+
+        <br>
+        <div class="about" id="about">
+          <br>
+          <h1>About Sandro's Cookie</h1>
+          <br>
+          <p>Welcome to Sandro's Cookie, where every bite is a journey of flavors and textures crafted with love and passion! 🍪 At Sandro's Cookie, we believe that a great cookie has the power to bring people together, evoke cherished memories, and create new moments of joy. Founded by Sandro, a baking enthusiast with a dream, our bakery started from humble beginnings, driven by a dedication to quality and innovation.</p><br><br>
+
+            <p>Our mission is simple: to create cookies that are not only delicious but also a treat for all the senses. We source only the finest ingredients, ensuring that each cookie is baked to perfection with a generous dash of creativity and a sprinkle of magic.</p><br>
+            
+            <p>Whether you're savoring our classic chocolate chip, indulging in our unique seasonal flavors, or trying our signature creations, you can be sure that every Sandro's Cookie is made with care and a passion for excellence. Join us in our cookie journey, and let us add a little sweetness to your day! 🌟🍪</p>
+        </div>
+
+
+
+
+
+        <!--popup for contact-->
+        <div class="ContactContainer">
+            <div class="popup" id="popup">
+              <img src="logo/Sandro'sCookieLogo.png" alt="Logo" width="100" height="auto">
+
+            <h3>Social Media:</h3>
+              <div class="social-media-icons">
+                <a href="https://web.facebook.com/sandro.hobayan"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/sandrohobayan/"><i class="fab fa-instagram"></i></a>
+              </div>
+
+            <h3>Email:</h3>
+                <a href="#">alesandrosfboo@gmail.com</a>
+
+            <h3>Contact Number:</h3>
+                <p>09466116103</p>
+
+              <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-text">© 2024 Sandro's Cookie</div>
+        <div class="social-media-icons">
+            <a href="https://web.facebook.com/sandro.hobayan"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/sandrohobayan/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript">
+    const carousel = document.querySelector('.carousel');
+    const images = document.querySelectorAll('.carousel-image');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    let currentIndex = 0;
+    const totalImages = images.length;
+    
+    // Function to move the carousel to the current image
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+    
+    // Move to the next image
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateCarousel();
+    });
+    
+    // Move to the previous image
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      updateCarousel();
+    });
+    
+    // Optional: Auto-slide every 3 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateCarousel();
+    }, 3000);
+
+    // for contact container
+    let popup = document.getElementById("popup");
+
+    function openPopup(){
+      popup.classList.add("open-popup");
+    }
+    function closePopup(){
+      popup.classList.remove("open-popup");
+    }
+
+    //for Products
+    document.getElementById("productsButton").addEventListener("click", function() {
+        document.getElementById("products").scrollIntoView({ behavior: 'smooth' });
+    });
+
+    
+
+    //for about
+    document.getElementById("aboutButton").addEventListener("click", function() {
+        document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+    });
+    </script>
+</html>

@@ -1,0 +1,363 @@
+ /* Reset margins and paddings */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  margin:0 0 10px 0;
+}
+
+.logo {
+  position: relative;
+  float: left;
+  top: -20px;
+  left: -10px;
+}
+
+/* Navigation Menu Styles */
+nav {
+  background-color: #333;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  padding: 10px;
+}
+
+.nav-menu li {
+  position: relative;
+  margin-right: 5px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+.nav-menu a:hover {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/*for carousel*/
+.carouselContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  margin: 50px 50px 20px 50px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  border: 2px solid #333;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: auto;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#prev-btn {
+  left: 10px;
+}
+
+#next-btn {
+  right: 10px;
+}
+
+main .about{
+  margin: 0 10px 0 10px;
+}
+
+main h1{
+  margin-bottom: 20px;
+}
+
+
+/*for products*/
+.products table{
+  background-color: #c7c7c7;
+}
+
+
+/*for table design*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr th{
+  background-color: #333;
+  color: white;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.read-more {
+  color: #333;
+  cursor: pointer;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+main{
+  font-family: Arial, sans-serif
+}
+
+main h1{
+  display: flex;
+  justify-content: center;
+}
+
+main h4{
+  padding: 10px;
+}
+
+/*for footer*/
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.social-media-icons a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.social-media-icons a :hover {
+  color: blue;
+  text-decoration: none;
+  font-size: 20px;
+  transition: .5s;
+}
+
+/*Phones*/
+@media (min-width: 200px) and (max-width: 600px){
+    header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+  .nav-menu {
+  padding: 10px;
+}
+
+  .nav-menu a {
+  padding: 5px 10px;
+}
+
+  .carouselContainer{
+    margin: 20px;
+  }
+
+  main {
+    padding: 5px;
+  }
+
+  main h1{
+    font-size: 1.5rem;
+  }
+
+  main h4{
+    font-size: .80rem;
+    padding: 10px;
+  }
+}
+
+/* Tablets and Medium Devices */
+@media (min-width: 600px) and (max-width: 1024px) {
+   
+
+  main {
+    padding: 10px;
+  }
+
+  main h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  .carouselContainer{
+    margin: 30px;
+  }
+
+  main h4{
+    font-size: 1rem;
+    padding: 20px;
+  }
+}
+
+/* Desktops (Large Devices) */
+@media (min-width: 1024px) {
+
+
+  main {
+    padding: 20px;
+  }
+
+  main h4{
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
+
+
+/*contact container*/
+.popup{
+  width: 400p;
+  background: rgba(255,255,255,0.6);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 40%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup h3{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.popup .social-media-icons a {
+  color: #333;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.popup .social-media-icons a :hover {
+  color: blue;
+  text-decoration: none;
+  font-size: 20px;
+  transition: .5s;
+}
+
+.popup a{
+  text-decoration: none;
+}
+
+.popup button{
+  width: 250px;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
